@@ -1,0 +1,143 @@
+{
+  "best": {
+    "model_name": "best.pt (Epoch 12)",
+    "total": 3000,
+    "correct_intents": 2076,
+    "intent_accuracy": 69.2,
+    "exact_matches": 914,
+    "exact_match_accuracy": 30.47,
+    "confusion_matrix": [
+      [
+        190,
+        0,
+        106,
+        0,
+        0,
+        0,
+        4,
+        75
+      ],
+      [
+        0,
+        184,
+        44,
+        74,
+        27,
+        0,
+        0,
+        46
+      ],
+      [
+        0,
+        0,
+        375,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        11,
+        0,
+        231,
+        83,
+        0,
+        10,
+        40
+      ],
+      [
+        0,
+        6,
+        59,
+        0,
+        308,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        3,
+        0,
+        0,
+        234,
+        0,
+        136
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        261,
+        114
+      ],
+      [
+        0,
+        0,
+        66,
+        0,
+        0,
+        0,
+        16,
+        293
+      ]
+    ],
+    "per_intent": {
+      "GET_ATTENDANCE": {
+        "total": 375,
+        "correct": 190,
+        "accuracy": 50.67
+      },
+      "GET_SUBJECT_ATTENDANCE": {
+        "total": 375,
+        "correct": 184,
+        "accuracy": 49.07
+      },
+      "ATTENDANCE_PROJECTION": {
+        "total": 375,
+        "correct": 375,
+        "accuracy": 100.0
+      },
+      "CLASSES_REQUIRED_FOR_TARGET": {
+        "total": 375,
+        "correct": 231,
+        "accuracy": 61.6
+      },
+      "MAX_CLASSES_CAN_MISS": {
+        "total": 375,
+        "correct": 308,
+        "accuracy": 82.13
+      },
+      "CHECK_ATTENDANCE_UPDATE": {
+        "total": 375,
+        "correct": 234,
+        "accuracy": 62.4
+      },
+      "HELP": {
+        "total": 375,
+        "correct": 261,
+        "accuracy": 69.6
+      },
+      "UNKNOWN": {
+        "total": 375,
+        "correct": 293,
+        "accuracy": 78.13
+      }
+    },
+    "malformed_stats": {
+      "total_malformed": 1113,
+      "malformed_pct": 37.1,
+      "empty_outputs": 0,
+      "wrong_field_count": 1113,
+      "invalid_intent_count": 3,
+      "genuine_unknown_predicted": 703,
+      "fallback_unknown_predicted": 0
+    }
+  }
+}

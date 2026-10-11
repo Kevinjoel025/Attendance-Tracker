@@ -1,0 +1,68 @@
+# ── Databases ──────────────────────────────────────────────
+*.db
+*.db-shm
+*.db-wal
+
+# ── Model checkpoints ──────────────────────────────────────
+# Exclude intermediate training states (latest/final epoch weights)
+# Preserve best.pt checkpoints and evaluation/diagnostic reports
+checkpoints/**/latest.pt
+checkpoints/**/final.pt
+checkpoints/latest.pt
+checkpoints/final.pt
+
+# ── Training datasets (can be regenerated) ─────────────────
+datasets/
+
+# ── Application logs & scratch artifacts ───────────────────
+logs/
+*.log
+scratch/
+
+# ── Python ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# ── Virtual environments ────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── IDE / OS ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Sensitive data files ────────────────────────────────────
+# Credentials are NEVER stored here; keyring handles them.
+# This section is a reminder.
+*.pem
+*.key
+*.env
+*.env.*
+secrets.yaml
+secrets.json
+
+# ── Playwright browser binaries ─────────────────────────────
+.playwright/
+
+# ── Pytest cache ────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Tokenizer training artifacts ────────────────────────────
+slm_vocab/
+*.vocab
+*.merges

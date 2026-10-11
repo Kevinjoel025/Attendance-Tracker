@@ -1,0 +1,73 @@
+{
+  "effective_from": "2026-07-16",
+  "timezone": "Asia/Kolkata",
+  "periods": [
+    {"period_num": 1, "start_time": "10:00", "end_time": "11:00"},
+    {"period_num": 2, "start_time": "11:00", "end_time": "12:00"},
+    {"period_num": 3, "start_time": "12:00", "end_time": "13:00"},
+    {"period_num": 4, "start_time": "13:40", "end_time": "14:40"},
+    {"period_num": 5, "start_time": "14:40", "end_time": "15:40"},
+    {"period_num": 6, "start_time": "15:40", "end_time": "16:40"}
+  ],
+  "lunch": {
+    "start_time": "13:00",
+    "end_time": "13:40"
+  },
+  "non_attendance_activities": [
+    "LIB",
+    "SPORTS",
+    "ECA/CCA",
+    "SL",
+    "MTP"
+  ],
+  "schedule": {
+    "Monday": [
+      {"period_num": 1, "subject": "DE", "subject_code": "22PC1AM202", "is_attendance_bearing": true},
+      {"period_num": 2, "subject": "WP", "subject_code": "22PE1AM301", "is_attendance_bearing": true},
+      {"period_num": 3, "subject": "OS", "subject_code": "22PC1IT202", "is_attendance_bearing": true},
+      {"period_num": 4, "subject": "ACD", "subject_code": "22PC1AM203", "is_attendance_bearing": true},
+      {"period_num": 5, "subject": "OE-1", "subject_code": "22OE1EN301", "is_attendance_bearing": true},
+      {"period_num": 6, "subject": "OE-1", "subject_code": "22OE1EN301", "is_attendance_bearing": true}
+    ],
+    "Tuesday": [
+      {"period_num": 1, "subject": "WP", "subject_code": "22PE1AM301", "is_attendance_bearing": true},
+      {"period_num": 2, "subject": "IoTAP", "subject_code": "22PC1IN301", "is_attendance_bearing": true},
+      {"period_num": 3, "subject": "ACD", "subject_code": "22PC1AM203", "is_attendance_bearing": true},
+      {"period_num": 4, "subject": "IoTAP LAB", "subject_code": "22PC2IN301", "is_attendance_bearing": true},
+      {"period_num": 5, "subject": "IoTAP LAB", "subject_code": "22PC2IN301", "is_attendance_bearing": true},
+      {"period_num": 6, "subject": "IoTAP LAB", "subject_code": "22PC2IN301", "is_attendance_bearing": true}
+    ],
+    "Wednesday": [
+      {"period_num": 1, "subject": "DE", "subject_code": "22PC1AM202", "is_attendance_bearing": true},
+      {"period_num": 2, "subject": "WP", "subject_code": "22PE1AM301", "is_attendance_bearing": true},
+      {"period_num": 3, "subject": "IoTAP", "subject_code": "22PC1IN301", "is_attendance_bearing": true},
+      {"period_num": 4, "subject": "ACD", "subject_code": "22PC1AM203", "is_attendance_bearing": true},
+      {"period_num": 5, "subject": "OS", "subject_code": "22PC1IT202", "is_attendance_bearing": true},
+      {"period_num": 6, "subject": "ECA/CCA", "subject_code": "ECA/CCA", "is_attendance_bearing": false}
+    ],
+    "Thursday": [
+      {"period_num": 1, "subject": "DE LAB", "subject_code": "22PC2AM202", "is_attendance_bearing": true},
+      {"period_num": 2, "subject": "DE LAB", "subject_code": "22PC2AM202", "is_attendance_bearing": true},
+      {"period_num": 3, "subject": "DE LAB", "subject_code": "22PC2AM202", "is_attendance_bearing": true},
+      {"period_num": 4, "subject": "WP", "subject_code": "22PE1AM301", "is_attendance_bearing": true},
+      {"period_num": 5, "subject": "LIB", "subject_code": "LIB", "is_attendance_bearing": false},
+      {"period_num": 6, "subject": "SPORTS", "subject_code": "SPORTS", "is_attendance_bearing": false}
+    ],
+    "Friday": [
+      {"period_num": 1, "subject": "IoTAP", "subject_code": "22PC1IN301", "is_attendance_bearing": true},
+      {"period_num": 2, "subject": "OS", "subject_code": "22PC1IT202", "is_attendance_bearing": true},
+      {"period_num": 3, "subject": "ACD", "subject_code": "22PC1AM203", "is_attendance_bearing": true},
+      {"period_num": 4, "subject": "DE", "subject_code": "22PC1AM202", "is_attendance_bearing": true},
+      {"period_num": 5, "subject": "SL", "subject_code": "SL", "is_attendance_bearing": false},
+      {"period_num": 6, "subject": "MTP", "subject_code": "MTP", "is_attendance_bearing": false}
+    ],
+    "Saturday": [
+      {"period_num": 1, "subject": "OE-1", "subject_code": "22OE1EN301", "is_attendance_bearing": true},
+      {"period_num": 2, "subject": "DE", "subject_code": "22PC1AM202", "is_attendance_bearing": true},
+      {"period_num": 3, "subject": "OS", "subject_code": "22PC1IT202", "is_attendance_bearing": true},
+      {"period_num": 4, "subject": "IoTAP", "subject_code": "22PC1IN301", "is_attendance_bearing": true},
+      {"period_num": 5, "subject": "GS", "subject_code": "22MN6HS302", "is_attendance_bearing": true},
+      {"period_num": 6, "subject": "GS", "subject_code": "22MN6HS302", "is_attendance_bearing": true}
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "best_epoch": 37,
+  "best_val_loss": 0.02341509567728887,
+  "train_loss_at_best": 0.018614107519029997,
+  "global_step": 9620,
+  "model_config": {
+    "vocab_size": 4096,
+    "context_length": 256,
+    "d_model": 256,
+    "n_layers": 6,
+    "n_heads": 4,
+    "d_ff": 1024,
+    "dropout": 0.1,
+    "pos_encoding": "learned",
+    "activation": "gelu",
+    "layer_norm": "pre",
+    "weight_tying": true,
+    "initializer_range": 0.02
+  },
+  "total_parameters": 5853184,
+  "test_md5": "b35425c19dc2062d4b5a5908d5c52b4d",
+  "test_sha256": "6e3e5b818b0792fd556317a0458708426342f170abd6966d7643498dfaca0c3d",
+  "total_test": 3000,
+  "correct_intents": 2419,
+  "intent_accuracy": 0.8063333333333333,
+  "exact_matches": 2275,
+  "exact_match_accuracy": 0.7583333333333333,
+  "intent_corr_slot_incorr": 144,
+  "intent_incorr": 581,
+  "malformed_count": 25,
+  "malformed_rate": 0.008333333333333333,
+  "empty_count": 0,
+  "invalid_intent_count": 0,
+  "wrong_field_count": 25,
+  "repeated_fields_count": 2,
+  "no_eos_count": 0,
+  "per_intent": {
+    "GET_ATTENDANCE": {
+      "correct": 235,
+      "total": 375,
+      "accuracy": 0.6266666666666667
+    },
+    "GET_SUBJECT_ATTENDANCE": {
+      "correct": 188,
+      "total": 375,
+      "accuracy": 0.5013333333333333
+    },
+    "ATTENDANCE_PROJECTION": {
+      "correct": 300,
+      "total": 375,
+      "accuracy": 0.8
+    },
+    "CLASSES_REQUIRED_FOR_TARGET": {
+      "correct": 354,
+      "total": 375,
+      "accuracy": 0.944
+    },
+    "MAX_CLASSES_CAN_MISS": {
+      "correct": 368,
+      "total": 375,
+      "accuracy": 0.9813333333333333
+    },
+    "CHECK_ATTENDANCE_UPDATE": {
+      "correct": 263,
+      "total": 375,
+      "accuracy": 0.7013333333333334
+    },
+    "HELP": {
+      "correct": 375,
+      "total": 375,
+      "accuracy": 1.0
+    },
+    "UNKNOWN": {
+      "correct": 336,
+      "total": 375,
+      "accuracy": 0.896
+    }
+  },
+  "confusion_matrix": [
+    [
+      235,
+      0,
+      0,
+      0,
+      0,
+      0,
+      63,
+      77
+    ],
+    [
+      0,
+      188,
+      0,
+      56,
+      0,
+      36,
+      0,
+      95
+    ],
+    [
+      0,
+      0,
+      300,
+      21,
+      0,
+      1,
+      0,
+      53
+    ],
+    [
+      0,
+      0,
+      0,
+      354,
+      20,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      7,
+      368,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      22,
+      0,
+      0,
+      0,
+      263,
+      0,
+      90
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      375,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      39,
+      336
+    ]
+  ],
+  "unrecognized_preds": {
+    "GET_ATTENDANCE": 0,
+    "GET_SUBJECT_ATTENDANCE": 0,
+    "ATTENDANCE_PROJECTION": 0,
+    "CLASSES_REQUIRED_FOR_TARGET": 0,
+    "MAX_CLASSES_CAN_MISS": 0,
+    "CHECK_ATTENDANCE_UPDATE": 0,
+    "HELP": 0,
+    "UNKNOWN": 0
+  },
+  "critical_confusions": {
+    "CHECK_ATTENDANCE_UPDATE_to_UNKNOWN": 90,
+    "HELP_to_UNKNOWN": 0,
+    "GET_ATTENDANCE_to_ATTENDANCE_PROJECTION": 0,
+    "CLASSES_REQUIRED_FOR_TARGET_to_MAX_CLASSES_CAN_MISS": 20,
+    "GET_ATTENDANCE_to_UNKNOWN": 77,
+    "UNKNOWN_to_GET_ATTENDANCE": 0,
+    "GET_ATTENDANCE_to_HELP": 63,
+    "GET_SUBJECT_ATTENDANCE_to_UNKNOWN": 95,
+    "ATTENDANCE_PROJECTION_to_CLASSES_REQUIRED": 21,
+    "MAX_CLASSES_CAN_MISS_to_CLASSES_REQUIRED": 7,
+    "CHECK_ATTENDANCE_UPDATE_to_GET_SUBJECT_ATTEND": 22
+  },
+  "training_performance": {
+    "total_time_sec": 2384.87,
+    "avg_epoch_time_sec": 23.848699999999997,
+    "avg_samples_sec": 1798.5571,
+    "avg_tokens_sec": 42979.3356
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "year": 2026,
+  "timezone": "Asia/Kolkata",
+  "recurring_rules": {
+    "second_and_fourth_saturday_holiday": true
+  },
+  "named_holidays": [
+    {"date": "2026-01-01", "name": "New Year Day", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-01-14", "name": "Bhogi", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-01-15", "name": "Sankranti/Pongal", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-01-16", "name": "Kanumu", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-01-26", "name": "Republic Day", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-03-03", "name": "Holi", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-03-19", "name": "Ugadi", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-03-21", "name": "Eid-ul-Fitr (Ramzan)", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-03-27", "name": "Sri Rama Navami", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-04-03", "name": "Good Friday", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-04-14", "name": "Dr. B. R. Ambedkar's Birthday", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-05-27", "name": "Eid-ul-Azha (Bakrid)", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-08-15", "name": "Independence Day", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-08-21", "name": "Varalakshmi Vratham", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-08-26", "name": "Eid-Milad-un-Nabi", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-09-14", "name": "Vinayaka Chavithi", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-10-02", "name": "Mahatma Gandhi Jayanti", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-10-19", "name": "Maharnavami", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-10-20", "name": "Vijaya Dasami / Dushera", "event_type": "HOLIDAY", "cancels_classes": true},
+    {"date": "2026-12-25", "name": "Christmas", "event_type": "HOLIDAY", "cancels_classes": true}
+  ],
+  "exceptions": [
+    {
+      "date": "2026-02-14",
+      "name": "Working Day (in lieu of New Year Day)",
+      "event_type": "WORKING_DAY_EXCEPTION",
+      "cancels_classes": false
+    }
+  ]
+}

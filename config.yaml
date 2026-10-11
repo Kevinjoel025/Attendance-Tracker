@@ -1,0 +1,90 @@
+# College Attendance Tracker — Configuration
+# ─────────────────────────────────────────────────────────────────
+# All runtime configuration lives here.
+# Secrets / credentials are NEVER stored here.
+# Credentials are managed exclusively via Windows Credential Manager
+# through the Python `keyring` library.
+# ─────────────────────────────────────────────────────────────────
+
+# ── Project ──────────────────────────────────────────────────────
+project:
+  name: "College Attendance Tracker"
+  version: "0.1.0"
+
+# ── Paths ────────────────────────────────────────────────────────
+paths:
+  database:    "data/attendance.db"
+  timetable:   "data/timetable.json"
+  holidays:    "data/holidays.json"
+  logs_dir:    "logs"
+  checkpoints: "checkpoints"
+  datasets:    "datasets"
+
+# ── Attendance Thresholds ─────────────────────────────────────────
+attendance:
+  college_threshold: 75.0   # Official VNR VJIET requirement
+  personal_target:   70.0   # Student's personal goal
+  default_threshold: 75.0   # Used when no context is given
+
+# ── College Portal ───────────────────────────────────────────────
+# Credentials are NOT stored here.
+# They are stored in Windows Credential Manager under the service name below.
+portal:
+  url:              "https://automation.vnrvjiet.ac.in"
+  credential_service: "attendance_tracker_portal"  # keyring service name
+  username:         "24071A6947"  # Not a secret — this is the student ID
+  # observation_window_end: Time after which a missing update is POTENTIALLY_UNREGISTERED
+  observation_window_end: "23:00"  # 24-hour IST
+
+# ── Timezone ─────────────────────────────────────────────────────
+timezone: "Asia/Kolkata"
+
+# ── Logging ──────────────────────────────────────────────────────
+logging:
+  level: "INFO"           # DEBUG | INFO | WARNING | ERROR
+  max_file_size_mb: 10
+  backup_count: 5
+  # IMPORTANT: Never log passwords, session tokens, or auth cookies.
+
+# ── SLM Model ────────────────────────────────────────────────────
+model:
+  n_layers:        6
+  d_model:         256
+  n_heads:         4
+  d_ff:            1024
+  context_length:  256
+  vocab_size:      4096
+  dropout:         0.1
+  pos_encoding:    "learned"    # learned | sinusoidal
+  activation:      "gelu"
+  layer_norm:      "pre"        # pre | post
+  weight_tying:    true
+
+# ── Training ─────────────────────────────────────────────────────
+training:
+  batch_size:          128
+  learning_rate:       3.0e-4
+  weight_decay:        0.1
+  grad_clip:           1.0
+  warmup_steps:        500
+  max_epochs:          100
+  early_stop_patience: 10
+  mixed_precision:     true     # FP16 on RTX 4060
+  device:              "cuda"   # "cuda" | "cpu"
+  seed:                42
+
+# ── NLU Parser ───────────────────────────────────────────────────
+nlu:
+  max_tokens_generated:  64   # SLM output is short; cap generation
+  fallback_intent:       "UNKNOWN"
+
+# ── Timetable ────────────────────────────────────────────────────
+timetable:
+  effective_from: "2026-07-16"
+  # Non-attendance activities — ignored for attendance expectations
+  non_attendance_activities:
+    - "LIB"
+    - "SPORTS"
+    - "ECA/CCA"
+    - "SL"
+    - "MTP"

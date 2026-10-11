@@ -1,0 +1,284 @@
+{
+  "best": {
+    "model_name": "best.pt (Epoch 14)",
+    "total": 3000,
+    "correct_intents": 1420,
+    "intent_accuracy": 47.33,
+    "exact_matches": 844,
+    "exact_match_accuracy": 28.13,
+    "confusion_matrix": [
+      [
+        176,
+        93,
+        0,
+        0,
+        0,
+        8,
+        31,
+        67
+      ],
+      [
+        0,
+        282,
+        0,
+        73,
+        1,
+        19,
+        0,
+        0
+      ],
+      [
+        0,
+        116,
+        109,
+        0,
+        0,
+        138,
+        0,
+        12
+      ],
+      [
+        0,
+        68,
+        0,
+        182,
+        0,
+        107,
+        8,
+        10
+      ],
+      [
+        0,
+        69,
+        0,
+        0,
+        99,
+        206,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        374,
+        0,
+        0
+      ],
+      [
+        0,
+        82,
+        0,
+        0,
+        0,
+        78,
+        86,
+        129
+      ],
+      [
+        0,
+        159,
+        0,
+        0,
+        0,
+        104,
+        0,
+        112
+      ]
+    ],
+    "per_intent": {
+      "GET_ATTENDANCE": {
+        "total": 375,
+        "correct": 176,
+        "accuracy": 46.93
+      },
+      "GET_SUBJECT_ATTENDANCE": {
+        "total": 375,
+        "correct": 282,
+        "accuracy": 75.2
+      },
+      "ATTENDANCE_PROJECTION": {
+        "total": 375,
+        "correct": 109,
+        "accuracy": 29.07
+      },
+      "CLASSES_REQUIRED_FOR_TARGET": {
+        "total": 375,
+        "correct": 182,
+        "accuracy": 48.53
+      },
+      "MAX_CLASSES_CAN_MISS": {
+        "total": 375,
+        "correct": 99,
+        "accuracy": 26.4
+      },
+      "CHECK_ATTENDANCE_UPDATE": {
+        "total": 375,
+        "correct": 374,
+        "accuracy": 99.73
+      },
+      "HELP": {
+        "total": 375,
+        "correct": 86,
+        "accuracy": 22.93
+      },
+      "UNKNOWN": {
+        "total": 375,
+        "correct": 112,
+        "accuracy": 29.87
+      }
+    },
+    "malformed_stats": {
+      "total_malformed": 1186,
+      "malformed_pct": 39.53,
+      "empty_outputs": 0,
+      "wrong_field_count": 1186,
+      "invalid_intent_count": 0,
+      "genuine_unknown_predicted": 331,
+      "fallback_unknown_predicted": 0
+    }
+  },
+  "final": {
+    "model_name": "final.pt (Epoch 100)",
+    "total": 3000,
+    "correct_intents": 1637,
+    "intent_accuracy": 54.57,
+    "exact_matches": 719,
+    "exact_match_accuracy": 23.97,
+    "confusion_matrix": [
+      [
+        140,
+        73,
+        0,
+        0,
+        0,
+        0,
+        55,
+        107
+      ],
+      [
+        0,
+        239,
+        0,
+        68,
+        11,
+        36,
+        8,
+        13
+      ],
+      [
+        0,
+        65,
+        243,
+        0,
+        1,
+        60,
+        2,
+        4
+      ],
+      [
+        0,
+        169,
+        7,
+        154,
+        4,
+        31,
+        7,
+        3
+      ],
+      [
+        0,
+        103,
+        0,
+        0,
+        211,
+        15,
+        42,
+        4
+      ],
+      [
+        0,
+        33,
+        0,
+        0,
+        28,
+        311,
+        1,
+        2
+      ],
+      [
+        0,
+        41,
+        0,
+        0,
+        0,
+        0,
+        334,
+        0
+      ],
+      [
+        0,
+        174,
+        0,
+        0,
+        0,
+        10,
+        183,
+        8
+      ]
+    ],
+    "per_intent": {
+      "GET_ATTENDANCE": {
+        "total": 375,
+        "correct": 140,
+        "accuracy": 37.33
+      },
+      "GET_SUBJECT_ATTENDANCE": {
+        "total": 375,
+        "correct": 239,
+        "accuracy": 63.73
+      },
+      "ATTENDANCE_PROJECTION": {
+        "total": 375,
+        "correct": 243,
+        "accuracy": 64.8
+      },
+      "CLASSES_REQUIRED_FOR_TARGET": {
+        "total": 375,
+        "correct": 154,
+        "accuracy": 41.07
+      },
+      "MAX_CLASSES_CAN_MISS": {
+        "total": 375,
+        "correct": 211,
+        "accuracy": 56.27
+      },
+      "CHECK_ATTENDANCE_UPDATE": {
+        "total": 375,
+        "correct": 311,
+        "accuracy": 82.93
+      },
+      "HELP": {
+        "total": 375,
+        "correct": 334,
+        "accuracy": 89.07
+      },
+      "UNKNOWN": {
+        "total": 375,
+        "correct": 8,
+        "accuracy": 2.13
+      }
+    },
+    "malformed_stats": {
+      "total_malformed": 1802,
+      "malformed_pct": 60.07,
+      "empty_outputs": 0,
+      "wrong_field_count": 1802,
+      "invalid_intent_count": 10,
+      "genuine_unknown_predicted": 131,
+      "fallback_unknown_predicted": 0
+    }
+  }
+}

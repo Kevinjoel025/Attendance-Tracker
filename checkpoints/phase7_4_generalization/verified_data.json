@@ -1,0 +1,235 @@
+{
+  "best_epoch": 58,
+  "best_val_loss": 0.03620813942203919,
+  "train_loss_at_best": 0.01576050068438053,
+  "global_step": 14500,
+  "model_config": {
+    "vocab_size": 4096,
+    "context_length": 256,
+    "d_model": 256,
+    "n_layers": 6,
+    "n_heads": 4,
+    "d_ff": 1024,
+    "dropout": 0.1,
+    "pos_encoding": "learned",
+    "activation": "gelu",
+    "layer_norm": "pre",
+    "weight_tying": true,
+    "initializer_range": 0.02
+  },
+  "test_md5": "b35425c19dc2062d4b5a5908d5c52b4d",
+  "test_sha256": "6e3e5b818b0792fd556317a0458708426342f170abd6966d7643498dfaca0c3d",
+  "total_test": 3000,
+  "correct_intents": 2384,
+  "intent_accuracy": 0.7946666666666666,
+  "exact_matches": 2221,
+  "exact_match_accuracy": 0.7403333333333333,
+  "intent_corr_slot_incorr": 163,
+  "intent_incorr": 616,
+  "malformed_count": 11,
+  "malformed_rate": 0.0036666666666666666,
+  "empty_count": 0,
+  "invalid_intent_count": 2,
+  "wrong_field_count": 11,
+  "repeated_fields_count": 0,
+  "no_eos_count": 0,
+  "per_intent": {
+    "GET_ATTENDANCE": {
+      "correct": 216,
+      "total": 375,
+      "accuracy": 0.576
+    },
+    "GET_SUBJECT_ATTENDANCE": {
+      "correct": 271,
+      "total": 375,
+      "accuracy": 0.7226666666666667
+    },
+    "ATTENDANCE_PROJECTION": {
+      "correct": 297,
+      "total": 375,
+      "accuracy": 0.792
+    },
+    "CLASSES_REQUIRED_FOR_TARGET": {
+      "correct": 372,
+      "total": 375,
+      "accuracy": 0.992
+    },
+    "MAX_CLASSES_CAN_MISS": {
+      "correct": 350,
+      "total": 375,
+      "accuracy": 0.9333333333333333
+    },
+    "CHECK_ATTENDANCE_UPDATE": {
+      "correct": 358,
+      "total": 375,
+      "accuracy": 0.9546666666666667
+    },
+    "HELP": {
+      "correct": 360,
+      "total": 375,
+      "accuracy": 0.96
+    },
+    "UNKNOWN": {
+      "correct": 160,
+      "total": 375,
+      "accuracy": 0.4266666666666667
+    }
+  },
+  "confusion_matrix": [
+    [
+      216,
+      0,
+      0,
+      0,
+      0,
+      0,
+      71,
+      88
+    ],
+    [
+      0,
+      271,
+      3,
+      22,
+      0,
+      8,
+      0,
+      69
+    ],
+    [
+      0,
+      0,
+      297,
+      65,
+      0,
+      6,
+      0,
+      7
+    ],
+    [
+      0,
+      0,
+      0,
+      372,
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      2,
+      23,
+      350,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      8,
+      1,
+      0,
+      0,
+      358,
+      0,
+      7
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      360,
+      15
+    ],
+    [
+      67,
+      0,
+      0,
+      18,
+      0,
+      67,
+      63,
+      160
+    ]
+  ],
+  "unrecognized_preds": {
+    "GET_ATTENDANCE": 0,
+    "GET_SUBJECT_ATTENDANCE": 2,
+    "ATTENDANCE_PROJECTION": 0,
+    "CLASSES_REQUIRED_FOR_TARGET": 0,
+    "MAX_CLASSES_CAN_MISS": 0,
+    "CHECK_ATTENDANCE_UPDATE": 0,
+    "HELP": 0,
+    "UNKNOWN": 0
+  },
+  "critical_confusions": {
+    "CHECK_ATTENDANCE_UPDATE_to_UNKNOWN": 7,
+    "HELP_to_UNKNOWN": 15,
+    "GET_ATTENDANCE_to_ATTENDANCE_PROJECTION": 0,
+    "CLASSES_REQUIRED_FOR_TARGET_to_MAX_CLASSES_CAN_MISS": 0,
+    "GET_ATTENDANCE_to_UNKNOWN": 88,
+    "top_confusion_pairs": [
+      [
+        "GET_ATTENDANCE",
+        "UNKNOWN",
+        88
+      ],
+      [
+        "GET_ATTENDANCE",
+        "HELP",
+        71
+      ],
+      [
+        "GET_SUBJECT_ATTENDANCE",
+        "UNKNOWN",
+        69
+      ],
+      [
+        "UNKNOWN",
+        "GET_ATTENDANCE",
+        67
+      ],
+      [
+        "UNKNOWN",
+        "CHECK_ATTENDANCE_UPDATE",
+        67
+      ],
+      [
+        "ATTENDANCE_PROJECTION",
+        "CLASSES_REQUIRED_FOR_TARGET",
+        65
+      ],
+      [
+        "UNKNOWN",
+        "HELP",
+        63
+      ],
+      [
+        "MAX_CLASSES_CAN_MISS",
+        "CLASSES_REQUIRED_FOR_TARGET",
+        23
+      ],
+      [
+        "GET_SUBJECT_ATTENDANCE",
+        "CLASSES_REQUIRED_FOR_TARGET",
+        22
+      ],
+      [
+        "UNKNOWN",
+        "CLASSES_REQUIRED_FOR_TARGET",
+        18
+      ]
+    ]
+  },
+  "training_performance": {
+    "total_time_sec": 3695.61,
+    "avg_epoch_time_sec": 36.9561,
+    "avg_samples_sec": 956.7255,
+    "avg_tokens_sec": 22596.1884
+  }
+}

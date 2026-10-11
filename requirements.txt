@@ -1,0 +1,25 @@
+# Core runtime dependencies
+PyYAML>=6.0
+pydantic>=2.0
+rich>=13.0
+keyring>=24.0
+playwright>=1.40
+pytest>=7.0
+pytest-cov>=4.0
+
+# PyTorch — install manually with the correct CUDA wheel.
+# Run ONE of the following depending on your CUDA version:
+#
+# For CUDA 12.8 (RTX 4060, Driver 581.86):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+#
+# For CUDA 12.1 (if cu128 is unavailable):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#
+# Verify with:
+#   python -c "import torch; print(torch.cuda.is_available())"
+#
+# torch is NOT listed here to prevent pip from pulling the CPU-only default.
+
+# Utility
+zoneinfo; python_version < "3.9"

@@ -1,0 +1,192 @@
+{
+  "total_examples": 3000,
+  "correct_intents": 2384,
+  "intent_accuracy": 79.47,
+  "exact_matches": 2221,
+  "exact_match_accuracy": 74.03,
+  "per_intent_metrics": {
+    "CHECK_ATTENDANCE_UPDATE": {
+      "total": 375,
+      "correct": 358,
+      "accuracy": 95.47
+    },
+    "GET_SUBJECT_ATTENDANCE": {
+      "total": 375,
+      "correct": 271,
+      "accuracy": 72.27
+    },
+    "UNKNOWN": {
+      "total": 375,
+      "correct": 160,
+      "accuracy": 42.67
+    },
+    "GET_ATTENDANCE": {
+      "total": 375,
+      "correct": 216,
+      "accuracy": 57.6
+    },
+    "MAX_CLASSES_CAN_MISS": {
+      "total": 375,
+      "correct": 350,
+      "accuracy": 93.33
+    },
+    "ATTENDANCE_PROJECTION": {
+      "total": 375,
+      "correct": 297,
+      "accuracy": 79.2
+    },
+    "CLASSES_REQUIRED_FOR_TARGET": {
+      "total": 375,
+      "correct": 372,
+      "accuracy": 99.2
+    },
+    "HELP": {
+      "total": 375,
+      "correct": 360,
+      "accuracy": 96.0
+    }
+  },
+  "target_achieved": false,
+  "sample_errors": [
+    {
+      "text": "can you please give me a summary of the latest space exploration mission",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "GET_ATTENDANCE"
+    },
+    {
+      "text": "can you how much total attendance have i accumulated so far thanks",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "Explain how a four stroke internal combustion engine functions?",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|WP|NONE|NONE|YESTERDAY",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "could you please how do i connect my wireless headphones to windows laptop thanks",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "HELP|NONE|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "HELP"
+    },
+    {
+      "text": "did the portal reflect the attendance for today gender sensitization session?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|GS|NONE|NONE|TODAY",
+      "predicted_output": "ATTENDANCE_PROJECTION|GS|NONE|NONE|NONE",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "ATTENDANCE_PROJECTION"
+    },
+    {
+      "text": "Is there any new attendance entry recorded for DE subject today's?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|DE|NONE|NONE|TODAY",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "can you display the attendance figures for DE",
+      "expected_output": "GET_SUBJECT_ATTENDANCE|DE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "can you please assuming i present myself for 15 further DE LAB classes what will the new percentage be if possible",
+      "expected_output": "ATTENDANCE_PROJECTION|DE LAB|NONE|15|NONE",
+      "predicted_output": "CLASSES_REQUIRED_FOR_TARGET|DE LAB|70|NONE|NONE",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET"
+    },
+    {
+      "text": "please give me a summary of the latest space exploration mission if possible",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "GET_ATTENDANCE"
+    },
+    {
+      "text": "would you how much total attendance have i accumulated so far quickly",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "hello can you display the attendance figures for OS class right now",
+      "expected_output": "GET_SUBJECT_ATTENDANCE|OS|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "can you where do i stand with my overall college attendance",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "HELP|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "HELP"
+    },
+    {
+      "text": "may i know give me a summary of the latest space exploration mission asap",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "GET_ATTENDANCE"
+    },
+    {
+      "text": "can you display the attendance figures for OS?",
+      "expected_output": "GET_SUBJECT_ATTENDANCE|OS|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "yo assuming i present myself for four further gs classes what will the new percentage be asap",
+      "expected_output": "ATTENDANCE_PROJECTION|GS|NONE|4|NONE",
+      "predicted_output": "CLASSES_REQUIRED_FOR_TARGET|GS|85|NONE|NONE",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET"
+    },
+    {
+      "text": "can you display the attendance figures for DE?",
+      "expected_output": "GET_SUBJECT_ATTENDANCE|DE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "Can you display the attendance figures for iot lab",
+      "expected_output": "GET_SUBJECT_ATTENDANCE|IoTAP LAB|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "hey assistant could you fetch my complete college attendance record asap",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "assuming i present myself for 5 further Web Development classes what will the new percentage be",
+      "expected_output": "ATTENDANCE_PROJECTION|WP|NONE|5|NONE",
+      "predicted_output": "CLASSES_REQUIRED_FOR_TARGET|WP|75|NONE|NONE",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET"
+    },
+    {
+      "text": "would you explain how a four stroke internal combustion engine functions please",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|WP|NONE|NONE|YESTERDAY",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "total_examples": 3000,
+  "correct_intents": 2241,
+  "intent_accuracy": 74.7,
+  "exact_matches": 2067,
+  "exact_match_accuracy": 68.9,
+  "per_intent_metrics": {
+    "CHECK_ATTENDANCE_UPDATE": {
+      "total": 375,
+      "correct": 221,
+      "accuracy": 58.93
+    },
+    "GET_SUBJECT_ATTENDANCE": {
+      "total": 375,
+      "correct": 351,
+      "accuracy": 93.6
+    },
+    "UNKNOWN": {
+      "total": 375,
+      "correct": 305,
+      "accuracy": 81.33
+    },
+    "GET_ATTENDANCE": {
+      "total": 375,
+      "correct": 169,
+      "accuracy": 45.07
+    },
+    "MAX_CLASSES_CAN_MISS": {
+      "total": 375,
+      "correct": 199,
+      "accuracy": 53.07
+    },
+    "ATTENDANCE_PROJECTION": {
+      "total": 375,
+      "correct": 375,
+      "accuracy": 100.0
+    },
+    "CLASSES_REQUIRED_FOR_TARGET": {
+      "total": 375,
+      "correct": 304,
+      "accuracy": 81.07
+    },
+    "HELP": {
+      "total": 375,
+      "correct": 317,
+      "accuracy": 84.53
+    }
+  },
+  "target_achieved": false,
+  "sample_errors": [
+    {
+      "text": "hey did the portal reflect the attendance for on 19th September IoT Architecture and Protocols Lab session please?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|IoTAP LAB|NONE|NONE|2026-09-19",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|IoTAP LAB|NONE|NONE|NONE",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "can you how much total attendance have i accumulated so far thanks",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "Determine how many IoT Architecture and Protocols classes i can forgo without falling under 85 percentage?",
+      "expected_output": "MAX_CLASSES_CAN_MISS|IoTAP|85|NONE|NONE",
+      "predicted_output": "CLASSES_REQUIRED_FOR_TARGET|IoTAP|85|NONE|NONE",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET"
+    },
+    {
+      "text": "assistant how much total attendance have i accumulated so far?",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "Did the portal reflect the attendance for for yesterday OE1 session?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|OE-1|NONE|NONE|YESTERDAY",
+      "predicted_output": "ATTENDANCE_PROJECTION|OE-1|NONE|3|NONE",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "ATTENDANCE_PROJECTION"
+    },
+    {
+      "text": "how many future sessions of IOT LAB must i attend to satisfy ninety percent?",
+      "expected_output": "CLASSES_REQUIRED_FOR_TARGET|IoTAP LAB|90|NONE|NONE",
+      "predicted_output": "ATTENDANCE_PROJECTION|IoTAP LAB|NONE|3|NONE",
+      "expected_intent": "CLASSES_REQUIRED_FOR_TARGET",
+      "predicted_intent": "ATTENDANCE_PROJECTION"
+    },
+    {
+      "text": "i'd like to know how many web hours can i cut and still preserve my 70% target",
+      "expected_output": "MAX_CLASSES_CAN_MISS|WP|70|NONE|NONE",
+      "predicted_output": "CLASSES_REQUIRED_FOR_TARGET|WP|70|NONE|NONE",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET"
+    },
+    {
+      "text": "i am new here what kind of requests can you understand quickly",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "may i know how much total attendance have i accumulated so far please",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "could you please how do i connect my wireless headphones to windows laptop thanks",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "HELP|NONE|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "HELP"
+    },
+    {
+      "text": "did the portal reflect the attendance for today gender sensitization session?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|GS|NONE|NONE|TODAY",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|GS|NONE|NONE|NONE",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "Was today's class participation logged on the server for IoT Architecture?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|IoTAP|NONE|NONE|2026-09-19",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|TODAY",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "i am new here what kind of requests can you understand asap",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "hello was today's class participation logged on the server for GS class?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|GS|NONE|NONE|YESTERDAY",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|TODAY",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "kindly tell me what is my bunk limit in OE1 while keeping above 95 percent?",
+      "expected_output": "MAX_CLASSES_CAN_MISS|OE-1|95|NONE|NONE",
+      "predicted_output": "ATTENDANCE_PROJECTION|OE-1|95|NONE|NONE",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "ATTENDANCE_PROJECTION"
+    },
+    {
+      "text": "would you how much total attendance have i accumulated so far quickly",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "I am new here what kind of requests can you understand?",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "quick question how many future sessions of data engineering laboratory must i attend to satisfy ninety five percent?",
+      "expected_output": "CLASSES_REQUIRED_FOR_TARGET|DE LAB|95|NONE|NONE",
+      "predicted_output": "ATTENDANCE_PROJECTION|DE LAB|NONE|3|NONE",
+      "expected_intent": "CLASSES_REQUIRED_FOR_TARGET",
+      "predicted_intent": "ATTENDANCE_PROJECTION"
+    },
+    {
+      "text": "Did the portal reflect the attendance for on 19th September operating systems session?",
+      "expected_output": "CHECK_ATTENDANCE_UPDATE|OS|NONE|NONE|2026-09-19",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|OS|NONE|NONE|NONE",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "please how many classes did i attend in web prog asap",
+      "expected_output": "GET_SUBJECT_ATTENDANCE|WP|NONE|NONE|NONE",
+      "predicted_output": "CLASSES_REQUIRED_FOR_TARGET|WP|NONE|NONE|NONE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET"
+    }
+  ]
+}

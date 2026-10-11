@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNR VJIET Attendance Tracker & Personal Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css?v=13.4" />
+</head>
+<body>
+
+  <div class="app-layout">
+    
+    <!-- ── LEFT SIDEBAR (~210px) ────────────────────────────────────────────── -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        
+        <!-- Brand & Semester Badge -->
+        <div class="sidebar-header">
+          <div class="sidebar-brand">
+            <div class="brand-title">VNR VJIET</div>
+            <div class="brand-subtitle">Attendance Assistant</div>
+          </div>
+          <div class="sidebar-badge-group">
+            <span class="sidebar-badge">VI Sem</span>
+            <span class="sidebar-subtext">B.Tech</span>
+          </div>
+        </div>
+
+        <!-- Primary Navigation -->
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-tab="assistant" id="nav-tab-assistant">
+            <span class="nav-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"/>
+              </svg>
+            </span>
+            <span>Assistant</span>
+          </button>
+          
+          <button class="nav-item" data-tab="calendar" id="nav-tab-calendar">
+            <span class="nav-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </span>
+            <span>Timetable & Calendar</span>
+          </button>
+        </nav>
+
+      </div>
+
+      <!-- Bottom Utility Actions -->
+      <div class="sidebar-bottom">
+        <button id="btn-sync" class="sidebar-action-item" title="Sync live attendance with portal (Ctrl+P)">
+          <div class="action-left">
+            <span class="nav-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+              </svg>
+            </span>
+            <span>Sync Portal</span>
+          </div>
+          <span class="kbd-hint">Ctrl+P</span>
+        </button>
+
+        <button id="btn-import-open" class="sidebar-action-item" title="Import attendance or holidays">
+          <div class="action-left">
+            <span class="nav-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              </svg>
+            </span>
+            <span>Import Data</span>
+          </div>
+        </button>
+
+        <button id="btn-history-open" class="sidebar-action-item" title="View historical snapshots">
+          <div class="action-left">
+            <span class="nav-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </span>
+            <span>Snapshot History</span>
+          </div>
+        </button>
+
+        <button id="btn-settings-open" class="sidebar-action-item" title="Application settings">
+          <div class="action-left">
+            <span class="nav-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </span>
+            <span>Settings</span>
+          </div>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT AREA ────────────────────────────────────────────────── -->
+    <main class="main-content">
+      
+      <!-- Shared Header -->
+      <header class="main-header">
+        <div class="page-title-group">
+          <h1 class="page-title" id="page-heading">Assistant</h1>
+          <p class="page-subtitle" id="page-subheading">Personal attendance assistant</p>
+        </div>
+
+        <!-- Shared Attendance Status Element (Top-Right) -->
+        <div class="attendance-status-card" id="status-card-header" title="Click to view target details and sync status">
+          <div class="status-row-top">
+            <span class="status-label">OVERALL</span>
+            <span class="status-metric" id="status-overall-text">--% • -- / --</span>
+          </div>
+          <div class="status-row-bottom" id="status-meta-text">PORTAL • UP TO DATE • SYNCED --</div>
+        </div>
+      </header>
+
+      <!-- ── PAGE 1: ASSISTANT VIEW ─────────────────────────────────────────── -->
+      <section id="view-assistant" class="view-section active">
+        <div class="assistant-card">
+          
+          <!-- Chat Messages Stream -->
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages rendered dynamically -->
+          </div>
+
+          <!-- Bottom Sparkle Watermark -->
+          <div class="sparkle-watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="#F1F2F3">
+              <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+            </svg>
+          </div>
+
+          <!-- Composer at bottom of card -->
+          <div class="composer-wrapper">
+            <form id="chat-form">
+              <div class="composer-input-box">
+                <input
+                  type="text"
+                  id="chat-input"
+                  class="chat-input"
+                  placeholder="Ask about your attendance... (Ctrl + K for commands)"
+                  autocomplete="off"
+                  maxlength="500"
+                />
+                <button type="submit" id="chat-submit" class="btn-send" title="Send query (Enter)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+              <div class="composer-hint">Enter to Send, Shift+Enter for new line</div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── PAGE 2: TIMETABLE & CALENDAR VIEW ──────────────────────────────── -->
+      <section id="view-calendar" class="view-section">
+        <div class="calendar-split-container">
+          
+          <!-- LEFT PANEL: WEEKLY TIMETABLE (65%) -->
+          <div class="panel-timetable">
+            <div class="panel-header-row">
+              <div class="panel-title">WEEKLY TIMETABLE</div>
+              <div class="panel-percent-label">65%</div>
+            </div>
+
+            <!-- Timetable Grid -->
+            <div class="timetable-grid-wrapper">
+              <table class="timetable-table" id="timetable-main-grid">
+                <thead>
+                  <tr>
+                    <th class="th-day-col"></th>
+                    <th>P1<span class="th-time">10:00–11:00</span></th>
+                    <th>P2<span class="th-time">11:00–12:00</span></th>
+                    <th>P3<span class="th-time">12:00–13:00</span></th>
+                    <th>LUNCH<span class="th-time">13:00–13:40</span></th>
+                    <th>P4<span class="th-time">13:40–14:40</span></th>
+                    <th>P5<span class="th-time">14:40–15:40</span></th>
+                    <th>P6<span class="th-time">15:40–16:40</span></th>
+                  </tr>
+                </thead>
+                <tbody id="timetable-grid-tbody">
+                  <!-- Rendered dynamically by app.js -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Subject Mapping Key -->
+            <div class="subject-mapping-section">
+              <div class="mapping-title">SUBJECT MAPPING KEY</div>
+              <div class="mapping-list" id="subject-mapping-list">
+                <div class="mapping-item">22PC1AM202 — DE — Data Engineering</div>
+                <div class="mapping-item">22PC1AM203 — ACD — Automata and Compiler Design</div>
+                <div class="mapping-item">22PC1IN301 — IoTAP — IoT Architecture and Protocols</div>
+                <div class="mapping-item">22PC1IT202 — OS — Operating Systems</div>
+                <div class="mapping-item">22PE1AM301 — WP — Web Programming</div>
+                <div class="mapping-item">22OE1EN301 — OE-1 — Storytelling for Effective Communication</div>
+                <div class="mapping-item">22MN6HS302 — GS — Gender Sensitization</div>
+                <div class="mapping-item">22PC2AM202 — DE LAB — Data Engineering Laboratory</div>
+                <div class="mapping-item">22PC2IN302 — IoTAP LAB — IoT Architecture and Protocols Laboratory</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT PANEL: SEMESTER & CALENDAR (35%) -->
+          <div class="panel-calendar-config">
+            <div class="panel-header-row">
+              <div class="panel-title">SEMESTER & CALENDAR</div>
+              <div class="panel-percent-label">35%</div>
+            </div>
+
+            <!-- Section A: Semester Configuration -->
+            <div class="section-label">SEMESTER CONFIGURATION</div>
+            <div class="config-group">
+              
+              <!-- Last Working Day -->
+              <div class="config-item-row">
+                <div>
+                  <div class="config-name">Last Working Day</div>
+                  <div class="config-val" id="lwd-display-text">--</div>
+                </div>
+                <button type="button" class="btn-subtle-edit" id="btn-edit-lwd">Edit</button>
+              </div>
+              <div id="lwd-inline-editor" class="inline-editor-box hidden">
+                <div class="inline-editor-row">
+                  <input type="date" id="input-lwd-date" class="form-input" style="flex:1;" />
+                  <button type="button" class="btn-action primary" id="btn-save-lwd" style="padding:4px 8px; font-size:11px;">Save</button>
+                  <button type="button" class="btn-action secondary" id="btn-cancel-lwd" style="padding:4px 8px; font-size:11px;">Cancel</button>
+                </div>
+              </div>
+
+              <!-- Mid-Term 1 -->
+              <div class="config-item-row">
+                <div>
+                  <div class="config-name">Mid-Term 1</div>
+                  <div class="config-val" id="mt1-display-text">--</div>
+                </div>
+                <button type="button" class="btn-subtle-edit" id="btn-edit-mt1">Edit</button>
+              </div>
+              <div id="mt1-inline-editor" class="inline-editor-box hidden">
+                <div class="inline-editor-row" style="margin-bottom:6px;">
+                  <input type="date" id="input-mt1-start" class="form-input" style="flex:1;" />
+                  <span style="color:var(--text-dim); font-size:11px;">to</span>
+                  <input type="date" id="input-mt1-end" class="form-input" style="flex:1;" />
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:6px;">
+                  <button type="button" class="btn-action primary" id="btn-save-mt1" style="padding:4px 8px; font-size:11px;">Save</button>
+                  <button type="button" class="btn-action secondary" id="btn-cancel-mt1" style="padding:4px 8px; font-size:11px;">Cancel</button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Section B: Holiday & Calendar Management -->
+            <div class="section-label">HOLIDAY & CALENDAR MANAGEMENT</div>
+            
+            <div class="date-rules-header">
+              <span class="date-rules-title">Date Rules</span>
+              <button type="button" id="btn-open-calendar-form" class="btn-subtle-add">+ Add Override</button>
+            </div>
+
+            <!-- Inline Add/Edit Override Form -->
+            <div id="calendar-entry-form-box" class="override-form-box hidden">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                <span id="calendar-entry-form-title" style="font-size: 11.5px; font-weight: 600; color: #FFF;">Add Date Rule</span>
+                <button type="button" id="btn-close-calendar-form-x" class="modal-close" style="font-size: 12px;" title="Close">✕</button>
+              </div>
+              <div id="calendar-entry-form-error" class="toast error hidden" style="font-size: 11px; padding: 4px 8px; margin-bottom: 4px;"></div>
+              <input type="hidden" id="input-entry-old-date" />
+              
+              <div style="display: flex; gap: 6px; flex-direction: column;">
+                <div>
+                  <label style="font-size: 10px; color: var(--text-dim); display: block; margin-bottom: 2px;">Date:</label>
+                  <input type="date" id="input-entry-date" class="form-input" style="width: 100%;" required />
+                </div>
+                <div>
+                  <label style="font-size: 10px; color: var(--text-dim); display: block; margin-bottom: 2px;">Event Type:</label>
+                  <select id="select-entry-type" class="form-select" style="width: 100%;">
+                    <option value="HOLIDAY">Holiday (No Classes)</option>
+                    <option value="WORKING_DAY">Working Day (Follows Timetable)</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-size: 10px; color: var(--text-dim); display: block; margin-bottom: 2px;">Event Name / Reason:</label>
+                  <input type="text" id="input-entry-name" class="form-input" style="width: 100%;" placeholder="e.g. Festival, Special Working Day" required />
+                </div>
+                <div>
+                  <label style="font-size: 10px; color: var(--text-dim); display: block; margin-bottom: 2px;">Optional Note:</label>
+                  <input type="text" id="input-entry-note" class="form-input" style="width: 100%;" placeholder="Optional details" />
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; gap: 6px; margin-top: 4px;">
+                <button type="button" id="btn-cancel-calendar-entry" class="btn-action secondary" style="padding: 3px 8px; font-size: 11px;">Cancel</button>
+                <button type="button" id="btn-save-calendar-entry" class="btn-action primary" style="padding: 3px 8px; font-size: 11px;">Save Entry</button>
+              </div>
+            </div>
+
+            <!-- Date Rules List (Unified Table for Tests and Clean UI) -->
+            <table id="unified-calendar-table" style="width:100%; border-collapse:collapse; display:none;" aria-hidden="true">
+              <tbody id="unified-calendar-tbody-hidden"></tbody>
+            </table>
+            
+            <div class="date-rules-list" id="unified-calendar-tbody">
+              <!-- Rendered dynamically matching Screenshot 2 -->
+              <div style="color:var(--text-dim); font-size:12px; padding:10px;">Loading calendar entries...</div>
+            </div>
+
+            <!-- Bottom Sparkle Watermark -->
+            <div class="sparkle-watermark" aria-hidden="true" style="bottom:12px; right:12px;">
+              <svg viewBox="0 0 24 24" fill="#F1F2F3">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+              </svg>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Compatibility Elements for Existing Tests ───────────────────────── -->
+      <div id="subject-grid" class="subject-grid hidden" style="display:none;" aria-hidden="true"></div>
+      <div id="compat-overall-attendance" class="hidden" style="display:none;" aria-hidden="true">Overall Attendance</div>
+
+    </main>
+
+  </div>
+
+  <!-- ── MODAL: DATA IMPORTER (CSV / EXCEL) ─────────────────────────────────── -->
+  <div id="modal-import" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title">Import Data</h2>
+        <button class="modal-close" id="btn-close-import">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+          <button type="button" class="tab-btn active import-category-tab" data-import-category="attendance">Attendance Snapshot</button>
+          <button type="button" class="tab-btn import-category-tab" data-import-category="calendar">Holidays & Calendar Overrides</button>
+        </div>
+
+        <!-- Mode Tabs -->
+        <div class="import-tabs">
+          <button type="button" class="tab-btn active import-tab" data-import-mode="file">File Upload (.xlsx / .csv)</button>
+          <button type="button" class="tab-btn import-tab" data-import-mode="text">Paste CSV Text</button>
+        </div>
+
+        <!-- Mode A: File Upload Drop Zone -->
+        <div id="import-panel-file" class="import-panel active">
+          <div class="file-drop-zone" id="file-drop-zone">
+            <p id="file-drop-text" style="color:var(--text-secondary); margin-bottom:10px;">Drag & drop your <strong>.xlsx</strong> or <strong>.csv</strong> file here, or click to browse</p>
+            <input type="file" id="file-input" accept=".xlsx,.xls,.csv,.txt" style="display:none;" />
+            <button type="button" class="btn-action secondary" onclick="document.getElementById('file-input').click()">Browse Files</button>
+          </div>
+          <div id="file-selected-name" class="file-name-indicator hidden" style="margin-top:8px; font-size:12px; color:var(--text-main);"></div>
+        </div>
+
+        <!-- Mode B: CSV Textarea -->
+        <div id="import-panel-text" class="import-panel hidden">
+          <textarea
+            id="import-csv-textarea"
+            class="csv-textarea"
+            rows="5"
+            placeholder="Subject,Attended,Conducted&#10;OS,25,36&#10;ACD,18,30&#10;..."
+          ></textarea>
+          <button type="button" id="btn-parse-text" class="btn-action secondary" style="margin-top:8px;">Preview CSV Text</button>
+        </div>
+
+        <!-- Ingestion Preview Area -->
+        <div id="import-preview-area" class="hidden" style="margin-top:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <div style="font-size:12px; font-weight:600; color:var(--text-main);">Preview & Validation</div>
+            <div id="preview-overall-badge" style="font-size:11px; color:var(--text-secondary); font-family:var(--font-mono);">--</div>
+          </div>
+          <div id="preview-alerts"></div>
+          <div style="max-height:160px; overflow-y:auto; border:1px solid var(--border-color); border-radius:var(--radius-sm);">
+            <table class="data-table">
+              <thead id="preview-table-head"></thead>
+              <tbody id="preview-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="btn-cancel-import" class="btn-action secondary">Cancel</button>
+        <button type="button" id="btn-commit-import" class="btn-action primary" disabled>Commit Import</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL: SNAPSHOT HISTORY ────────────────────────────────────────────── -->
+  <div id="modal-history" class="modal-overlay hidden">
+    <div class="modal-card" style="max-width:760px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Snapshot History & Comparisons</h2>
+        <button class="modal-close" id="btn-close-history">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="history-grid">
+          <div>
+            <div style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">Saved Snapshots</div>
+            <div class="snapshots-list" id="snapshots-list-container">
+              <div style="color:var(--text-dim); font-size:12px;">Loading snapshots...</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;">Delta Comparison</div>
+            <div id="comparison-result-view" style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); white-space:pre-wrap; background:var(--bg-main); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px; min-height:200px;">Select a snapshot to compare.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="btn-close-history-bottom" class="btn-action secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL: SETTINGS ────────────────────────────────────────────────────── -->
+  <div id="modal-settings" class="modal-overlay hidden">
+    <div class="modal-card" style="max-width:520px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Settings & Configuration</h2>
+        <button class="modal-close" id="btn-close-settings">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="display:flex; flex-direction:column; gap:14px; font-size:12.5px;">
+          <div>
+            <div style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; margin-bottom:4px;">Academic Scope</div>
+            <div style="color:var(--text-main); font-weight:600;">VNR Vignana Jyothi Institute of Engineering & Technology</div>
+            <div style="color:var(--text-muted); font-size:11.5px; margin-top:2px;">B.Tech Semester 6 (Autonomous · R22 Regulation) · 9 Core Subjects</div>
+          </div>
+
+          <div style="border-top:1px solid var(--border-subtle); padding-top:10px;">
+            <div style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; margin-bottom:4px;">Thresholds</div>
+            <div style="display:flex; justify-content:space-between; color:var(--text-secondary);">
+              <span>College Threshold:</span>
+              <strong style="color:var(--text-main);">75.0%</strong>
+            </div>
+            <div style="display:flex; justify-content:space-between; color:var(--text-secondary); margin-top:4px;">
+              <span>Personal Target:</span>
+              <strong style="color:var(--text-main);">70.0%</strong>
+            </div>
+          </div>
+
+          <div style="border-top:1px solid var(--border-subtle); padding-top:10px;">
+            <div style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; margin-bottom:4px;">Inference & NLU Engine</div>
+            <div style="display:flex; justify-content:space-between; color:var(--text-secondary);">
+              <span>Model Architecture:</span>
+              <span style="font-family:var(--font-mono); color:var(--text-main);">Custom SLM Transformer</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; color:var(--text-secondary); margin-top:4px;">
+              <span>Total Parameters:</span>
+              <span style="font-family:var(--font-mono); color:var(--text-main);">5,853,184 (Frozen)</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; color:var(--text-secondary); margin-top:4px;">
+              <span>Timezone:</span>
+              <span style="font-family:var(--font-mono); color:var(--text-main);">Asia/Kolkata (IST)</span>
+            </div>
+          </div>
+
+          <div style="border-top:1px solid var(--border-subtle); padding-top:10px;">
+            <div style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase; margin-bottom:4px;">Keyboard Shortcuts</div>
+            <div style="display:flex; justify-content:space-between; color:var(--text-secondary);">
+              <span>Sync Portal:</span>
+              <span class="kbd-hint">Ctrl + P</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; color:var(--text-secondary); margin-top:4px;">
+              <span>Focus Assistant Composer:</span>
+              <span class="kbd-hint">Ctrl + K</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="btn-close-settings-bottom" class="btn-action secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── POPOVER: ATTENDANCE DETAILS ────────────────────────────────────────── -->
+  <div id="popover-attendance" class="modal-overlay hidden">
+    <div class="modal-card" style="max-width:440px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Attendance Overview</h2>
+        <button class="modal-close" id="btn-close-popover">✕</button>
+      </div>
+
+      <div class="modal-body" id="popover-attendance-body">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-action secondary" onclick="document.getElementById('popover-attendance').classList.add('hidden')">Close</button>
+        <button type="button" class="btn-action primary" onclick="App.openHistoryModal(); document.getElementById('popover-attendance').classList.add('hidden')">View History</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Client-side Scripts -->
+  <script src="/static/js/api.js?v=13.4"></script>
+  <script src="/static/js/app.js?v=13.4"></script>
+</body>
+</html>

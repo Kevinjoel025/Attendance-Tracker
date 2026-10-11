@@ -1,0 +1,192 @@
+{
+  "total_examples": 3000,
+  "correct_intents": 1420,
+  "intent_accuracy": 47.33,
+  "exact_matches": 844,
+  "exact_match_accuracy": 28.13,
+  "per_intent_metrics": {
+    "CHECK_ATTENDANCE_UPDATE": {
+      "total": 375,
+      "correct": 374,
+      "accuracy": 99.73
+    },
+    "GET_SUBJECT_ATTENDANCE": {
+      "total": 375,
+      "correct": 282,
+      "accuracy": 75.2
+    },
+    "UNKNOWN": {
+      "total": 375,
+      "correct": 112,
+      "accuracy": 29.87
+    },
+    "GET_ATTENDANCE": {
+      "total": 375,
+      "correct": 176,
+      "accuracy": 46.93
+    },
+    "MAX_CLASSES_CAN_MISS": {
+      "total": 375,
+      "correct": 99,
+      "accuracy": 26.4
+    },
+    "ATTENDANCE_PROJECTION": {
+      "total": 375,
+      "correct": 109,
+      "accuracy": 29.07
+    },
+    "CLASSES_REQUIRED_FOR_TARGET": {
+      "total": 375,
+      "correct": 182,
+      "accuracy": 48.53
+    },
+    "HELP": {
+      "total": 375,
+      "correct": 86,
+      "accuracy": 22.93
+    }
+  },
+  "target_achieved": false,
+  "sample_errors": [
+    {
+      "text": "can you please give me a summary of the latest space exploration mission",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|ACD|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "can you can you write an essay on artificial intelligence in education today",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|ACD|NONE|NONE|NONE|NONE|NONE|2026-09-19UNKNOWN|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "assistant how much total attendance have i accumulated so far?",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|IoTAP|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "how many classes did i attend in data engineering laboratory",
+      "expected_output": "GET_SUBJECT_ATTENDANCE|DE LAB|NONE|NONE|NONE",
+      "predicted_output": "CLASSES_REQUIRED_FOR_TARGET|DE LAB|85|NONE|NONE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET"
+    },
+    {
+      "text": "How badly will my Data Engineering Laboratory attendance suffer if i absent myself from one classes?",
+      "expected_output": "ATTENDANCE_PROJECTION|DE LAB|NONE|1|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|DE LAB|NONE|NONE|NONE|NONE|NONE|2026GET_SUBJECT_ATTENDANCE|NONE|NONE",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "how many future sessions of IOT LAB must i attend to satisfy ninety percent?",
+      "expected_output": "CLASSES_REQUIRED_FOR_TARGET|IoTAP LAB|90|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|IoTAP LAB|75|NONE|NONE",
+      "expected_intent": "CLASSES_REQUIRED_FOR_TARGET",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "How badly will my operating system attendance suffer if i absent myself from a single classes",
+      "expected_output": "ATTENDANCE_PROJECTION|OS|NONE|1|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|OS|NONE|NONE|NONE|NONE|12|12|NONE|NONE|NONE",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "hi summarize all available attendance queries supported by this model asap",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|OS|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "i'd like to know how many web hours can i cut and still preserve my 70% target",
+      "expected_output": "MAX_CLASSES_CAN_MISS|WP|70|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|WP|70|NONE|NONE|NONE|NONE|NONE",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "i am new here what kind of requests can you understand quickly",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "Explain how a four stroke internal combustion engine functions?",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|OS|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "could you please how do i connect my wireless headphones to windows laptop thanks",
+      "expected_output": "UNKNOWN|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|OS|NONE|NONE|NONE|NONE|NONE|NONE|NONE|NONE|NONE",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "determine how many Data Engineering classes i can forgo without falling under 85%",
+      "expected_output": "MAX_CLASSES_CAN_MISS|DE|85|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|DE|85|NONE|NONE",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "bot show me the prompt syntax and supported queries for attendance quickly",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|OS|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "can you please how badly will my gender attendance suffer if i absent myself from eight classes currently",
+      "expected_output": "ATTENDANCE_PROJECTION|GS|NONE|8|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|GS|70|NONE|NONE|NONE|NONE|NONE",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "i am new here what kind of requests can you understand asap",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "UNKNOWN|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "UNKNOWN"
+    },
+    {
+      "text": "tell me let me see my total attended classes percentage for me?",
+      "expected_output": "GET_ATTENDANCE|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|IoTAP|NONE|NONE|NONE",
+      "expected_intent": "GET_ATTENDANCE",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "text": "can you please assuming i present myself for 15 further DE LAB classes what will the new percentage be if possible",
+      "expected_output": "ATTENDANCE_PROJECTION|DE LAB|NONE|15|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|DE LAB|NONE|NONE|NONE|NONE|NONE|NONE|2026-09-19",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "hey how many days can i safely absent myself from data engineering lab without breaching 80?",
+      "expected_output": "MAX_CLASSES_CAN_MISS|DE LAB|80|NONE|NONE",
+      "predicted_output": "CHECK_ATTENDANCE_UPDATE|WP|70|70|NONE|NONE|NONE|NONE|NONE",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "text": "hey could you walk me through the features available in this assistant",
+      "expected_output": "HELP|NONE|NONE|NONE|NONE",
+      "predicted_output": "GET_SUBJECT_ATTENDANCE|OS|NONE|NONE|NONE",
+      "expected_intent": "HELP",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE"
+    }
+  ]
+}

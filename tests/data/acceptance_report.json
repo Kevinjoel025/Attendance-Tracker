@@ -1,0 +1,838 @@
+{
+  "total_queries": 168,
+  "raw_slm": {
+    "intent_accuracy": 83.93,
+    "intent_correct": 141,
+    "subject_accuracy": 82.81,
+    "subject_correct": 106,
+    "subject_total": 128,
+    "target_accuracy": 65.38,
+    "target_correct": 17,
+    "target_total": 26,
+    "count_accuracy": 82.35,
+    "count_correct": 14,
+    "count_total": 17,
+    "exact_structured_match": 76.79,
+    "exact_structured_match_count": 129,
+    "malformed_rate": 5.95,
+    "malformed_count": 10,
+    "unknown_detection_accuracy": 80.0,
+    "unknown_correct": 8,
+    "unknown_total": 10,
+    "per_intent": {
+      "GET_ATTENDANCE": {
+        "total": 17,
+        "correct": 17,
+        "accuracy": 100.0
+      },
+      "GET_SUBJECT_ATTENDANCE": {
+        "total": 80,
+        "correct": 60,
+        "accuracy": 75.0
+      },
+      "ATTENDANCE_PROJECTION": {
+        "total": 17,
+        "correct": 14,
+        "accuracy": 82.35
+      },
+      "CLASSES_REQUIRED_FOR_TARGET": {
+        "total": 13,
+        "correct": 13,
+        "accuracy": 100.0
+      },
+      "MAX_CLASSES_CAN_MISS": {
+        "total": 13,
+        "correct": 12,
+        "accuracy": 92.31
+      },
+      "CHECK_ATTENDANCE_UPDATE": {
+        "total": 10,
+        "correct": 9,
+        "accuracy": 90.0
+      },
+      "HELP": {
+        "total": 8,
+        "correct": 8,
+        "accuracy": 100.0
+      },
+      "UNKNOWN": {
+        "total": 10,
+        "correct": 8,
+        "accuracy": 80.0
+      }
+    },
+    "per_subject": {
+      "GS": {
+        "total": 10,
+        "correct": 9,
+        "accuracy": 90.0
+      },
+      "OE-1": {
+        "total": 13,
+        "correct": 9,
+        "accuracy": 69.23
+      },
+      "DE": {
+        "total": 17,
+        "correct": 15,
+        "accuracy": 88.24
+      },
+      "ACD": {
+        "total": 16,
+        "correct": 12,
+        "accuracy": 75.0
+      },
+      "IoTAP": {
+        "total": 13,
+        "correct": 10,
+        "accuracy": 76.92
+      },
+      "OS": {
+        "total": 23,
+        "correct": 18,
+        "accuracy": 78.26
+      },
+      "DE LAB": {
+        "total": 11,
+        "correct": 10,
+        "accuracy": 90.91
+      },
+      "IoTAP LAB": {
+        "total": 11,
+        "correct": 10,
+        "accuracy": 90.91
+      },
+      "WP": {
+        "total": 14,
+        "correct": 13,
+        "accuracy": 92.86
+      }
+    }
+  },
+  "pipeline": {
+    "intent_accuracy": 98.81,
+    "intent_correct": 166,
+    "subject_accuracy": 100.0,
+    "subject_correct": 128,
+    "subject_total": 128,
+    "target_accuracy": 100.0,
+    "target_correct": 26,
+    "target_total": 26,
+    "count_accuracy": 100.0,
+    "count_correct": 17,
+    "count_total": 17,
+    "exact_pipeline_match": 98.81,
+    "exact_pipeline_match_count": 166,
+    "success_rate": 100.0,
+    "success_count": 168,
+    "unknown_detection_accuracy": 80.0,
+    "unknown_correct": 8,
+    "unknown_total": 10,
+    "per_intent": {
+      "GET_ATTENDANCE": {
+        "total": 17,
+        "correct": 17,
+        "accuracy": 100.0
+      },
+      "GET_SUBJECT_ATTENDANCE": {
+        "total": 80,
+        "correct": 80,
+        "accuracy": 100.0
+      },
+      "ATTENDANCE_PROJECTION": {
+        "total": 17,
+        "correct": 17,
+        "accuracy": 100.0
+      },
+      "CLASSES_REQUIRED_FOR_TARGET": {
+        "total": 13,
+        "correct": 13,
+        "accuracy": 100.0
+      },
+      "MAX_CLASSES_CAN_MISS": {
+        "total": 13,
+        "correct": 13,
+        "accuracy": 100.0
+      },
+      "CHECK_ATTENDANCE_UPDATE": {
+        "total": 10,
+        "correct": 10,
+        "accuracy": 100.0
+      },
+      "HELP": {
+        "total": 8,
+        "correct": 8,
+        "accuracy": 100.0
+      },
+      "UNKNOWN": {
+        "total": 10,
+        "correct": 8,
+        "accuracy": 80.0
+      }
+    },
+    "per_subject": {
+      "GS": {
+        "total": 10,
+        "correct": 10,
+        "accuracy": 100.0
+      },
+      "OE-1": {
+        "total": 13,
+        "correct": 13,
+        "accuracy": 100.0
+      },
+      "DE": {
+        "total": 17,
+        "correct": 17,
+        "accuracy": 100.0
+      },
+      "ACD": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 100.0
+      },
+      "IoTAP": {
+        "total": 13,
+        "correct": 13,
+        "accuracy": 100.0
+      },
+      "OS": {
+        "total": 23,
+        "correct": 23,
+        "accuracy": 100.0
+      },
+      "DE LAB": {
+        "total": 11,
+        "correct": 11,
+        "accuracy": 100.0
+      },
+      "IoTAP LAB": {
+        "total": 11,
+        "correct": 11,
+        "accuracy": 100.0
+      },
+      "WP": {
+        "total": 14,
+        "correct": 14,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "failures": [
+    {
+      "query": "How much attendance do I have in operating systems?",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OS",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "How much attendance do I have in IoT Architecture and Protocols Laboratory?",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "IoTAP LAB",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "How much attendance do I have in WP?",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "WP",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "What happens if I attend the next 5 classes of OS?",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET",
+      "expected_subject": "OS",
+      "predicted_subject": "OS",
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": 5,
+      "predicted_count": 5,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM confuses projection with classes required"
+    },
+    {
+      "query": "If I attend the next 2 classes of ACD",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "ACD",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": 2,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of ATTENDANCE_PROJECTION"
+    },
+    {
+      "query": "How will my attendance suffer if I absent myself from 1 class of ACD?",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "ATTENDANCE_PROJECTION",
+      "expected_subject": "ACD",
+      "predicted_subject": "ACD",
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": 1,
+      "predicted_count": 12,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted count 12 != expected 1"
+    },
+    {
+      "query": "What happens if I attend the next 2 classes?",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "ATTENDANCE_PROJECTION",
+      "expected_subject": null,
+      "predicted_subject": "OS",
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": 2,
+      "predicted_count": 2,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "MEDIUM",
+      "detail": "Raw SLM extracted subject OS instead of None"
+    },
+    {
+      "query": "How many classes do I need for my goal in ACD?",
+      "expected_intent": "CLASSES_REQUIRED_FOR_TARGET",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET",
+      "expected_subject": "ACD",
+      "predicted_subject": "ACD",
+      "expected_target": 70.0,
+      "predicted_target": 100.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 100.0 != expected 70.0"
+    },
+    {
+      "query": "How many classes can I miss in OS?",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "MAX_CLASSES_CAN_MISS",
+      "expected_subject": "OS",
+      "predicted_subject": "OS",
+      "expected_target": 75.0,
+      "predicted_target": 90.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 90.0 != expected 75.0"
+    },
+    {
+      "query": "How many can I bunk in DE?",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "MAX_CLASSES_CAN_MISS",
+      "expected_subject": "DE",
+      "predicted_subject": "DE",
+      "expected_target": 75.0,
+      "predicted_target": 100.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 100.0 != expected 75.0"
+    },
+    {
+      "query": "How many classes can I skip in ACD?",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "MAX_CLASSES_CAN_MISS",
+      "expected_subject": "ACD",
+      "predicted_subject": "ACD",
+      "expected_target": 75.0,
+      "predicted_target": 100.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 100.0 != expected 75.0"
+    },
+    {
+      "query": "What's my bunk margin in IoT?",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "IoTAP",
+      "predicted_subject": null,
+      "expected_target": 75.0,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of MAX_CLASSES_CAN_MISS"
+    },
+    {
+      "query": "How many more classes can I miss in WP?",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "MAX_CLASSES_CAN_MISS",
+      "expected_subject": "WP",
+      "predicted_subject": "WP",
+      "expected_target": 75.0,
+      "predicted_target": 70.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 70.0 != expected 75.0"
+    },
+    {
+      "query": "How many classes can I miss in OE-1?",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "MAX_CLASSES_CAN_MISS",
+      "expected_subject": "OE-1",
+      "predicted_subject": "OE-1",
+      "expected_target": 75.0,
+      "predicted_target": 70.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 70.0 != expected 75.0"
+    },
+    {
+      "query": "How many classes can I miss in DE LAB?",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "MAX_CLASSES_CAN_MISS",
+      "expected_subject": "DE LAB",
+      "predicted_subject": "DE LAB",
+      "expected_target": 75.0,
+      "predicted_target": 70.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 70.0 != expected 75.0"
+    },
+    {
+      "query": "Did the attendance update recently?",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "CHECK_ATTENDANCE_UPDATE",
+      "expected_subject": null,
+      "predicted_subject": "OS",
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "MEDIUM",
+      "detail": "Raw SLM extracted subject OS instead of None"
+    },
+    {
+      "query": "Did my attendance change recently?",
+      "expected_intent": "CHECK_ATTENDANCE_UPDATE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": null,
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of CHECK_ATTENDANCE_UPDATE"
+    },
+    {
+      "query": "asdfgh",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "GET_ATTENDANCE",
+      "expected_subject": null,
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "MEDIUM",
+      "detail": "OOD query misclassified as GET_ATTENDANCE"
+    },
+    {
+      "query": "asdfgh",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "GET_ATTENDANCE",
+      "expected_subject": null,
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "PIPELINE",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "MEDIUM",
+      "detail": "OOD query misclassified as GET_ATTENDANCE"
+    },
+    {
+      "query": "hello",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "HELP",
+      "expected_subject": null,
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "MEDIUM",
+      "detail": "OOD query misclassified as HELP"
+    },
+    {
+      "query": "hello",
+      "expected_intent": "UNKNOWN",
+      "predicted_intent": "HELP",
+      "expected_subject": null,
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "PIPELINE",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "MEDIUM",
+      "detail": "OOD query misclassified as HELP"
+    },
+    {
+      "query": "can i bunk some os classes",
+      "expected_intent": "MAX_CLASSES_CAN_MISS",
+      "predicted_intent": "MAX_CLASSES_CAN_MISS",
+      "expected_subject": "OS",
+      "predicted_subject": "OS",
+      "expected_target": 75.0,
+      "predicted_target": 70.0,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "LOW",
+      "detail": "Raw SLM predicted target 70.0 != expected 75.0"
+    },
+    {
+      "query": "if i go to the next 5 iot classes what happens",
+      "expected_intent": "ATTENDANCE_PROJECTION",
+      "predicted_intent": "CLASSES_REQUIRED_FOR_TARGET",
+      "expected_subject": "IoTAP",
+      "predicted_subject": "IoTAP",
+      "expected_target": null,
+      "predicted_target": 75.0,
+      "expected_count": 5,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM confuses projection with classes required"
+    },
+    {
+      "query": "storytelling comms attendance",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OE-1",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "operating system",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OS",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "Operating Systems",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OS",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "OS",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OS",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "os",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OS",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "DE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "DE",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "de",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "DE",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "compiler",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "ACD",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "compiler design",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "GET_SUBJECT_ATTENDANCE",
+      "expected_subject": "ACD",
+      "predicted_subject": "OS",
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "MEDIUM",
+      "detail": "Raw SLM extracted subject OS instead of ACD"
+    },
+    {
+      "query": "ACD",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "ACD",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "iot",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "IoTAP",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "iotap",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "IoTAP",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "gender",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "GS",
+      "predicted_subject": "GS",
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: |GS|NONE|NONE|NONE"
+    },
+    {
+      "query": "gender sensitization",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "GS",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    },
+    {
+      "query": "storytelling",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OE-1",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "OE",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OE-1",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "OE-1",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "OE-1",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "C: Inference / Generation Artifact",
+      "severity": "HIGH",
+      "detail": "Malformed SLM output: UNKNOWN|NONE|NONE|NONE"
+    },
+    {
+      "query": "DE lab",
+      "expected_intent": "GET_SUBJECT_ATTENDANCE",
+      "predicted_intent": "UNKNOWN",
+      "expected_subject": "DE LAB",
+      "predicted_subject": null,
+      "expected_target": null,
+      "predicted_target": null,
+      "expected_count": null,
+      "predicted_count": null,
+      "failure_stage": "RAW_SLM",
+      "failure_type": "A: SLM Training / Data Gap",
+      "severity": "HIGH",
+      "detail": "Raw SLM predicted UNKNOWN instead of GET_SUBJECT_ATTENDANCE"
+    }
+  ]
+}
